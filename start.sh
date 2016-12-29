@@ -28,5 +28,6 @@ mpc outputs
 mpc update
 mpc ls | mpc add
 mpc repeat on
+mpc random on
 mpc play
 tail -f /var/log/mpd/*
