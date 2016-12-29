@@ -20,6 +20,10 @@ if [ -n "$ICECAST_PASSWORD" ]; then
     sed -i "s/<password>[^<]*<\/password>/<password>$ICECAST_PASSWORD<\/password>/g" /etc/icecast2/icecast.xml
 fi
 
+if [ -n "$ICECAST_SOURCE_PASSWORD" ]; then
+    sed -i "s/\"hackme\"/\"$ICECAST_SOURCE_PASSWORD\"/"  /etc/mpd.conf
+fi
+
 #cat /etc/icecast2/icecast.xml
  
 /etc/init.d/icecast2 restart
