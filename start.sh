@@ -26,8 +26,8 @@ fi
 
 #cat /etc/icecast2/icecast.xml
  
-/etc/init.d/icecast2 restart
-/etc/init.d/mpd restart
+icecast -c /etc/icecast.xml -b
+mpd /etc/mpd.conf
 mpc outputs
 mpc update
 mpc ls | mpc add
