@@ -1,8 +1,7 @@
-FROM alpine:3.4
-
-MAINTAINER Alastair Montgomery "alastair@montgomery.me.uk"
+FROM alpine:latest
 
 RUN apk --update add icecast mpc mpd && \
+    rm -rf /var/cache/apk/* && \
     mkdir -p /opt/music && \
     mkdir -p /opt/playlists && \
     mkdir -p /run/mpd && \
