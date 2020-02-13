@@ -1,7 +1,5 @@
 FROM ubuntu:latest
 
-MAINTAINER Alastair Montgomery "alastair@montgomery.me.uk"
-
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get -qq -y update && \
